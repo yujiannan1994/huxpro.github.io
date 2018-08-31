@@ -164,6 +164,33 @@
     })
 </script>
 
+<!--L2Dwidget.js -->
+<script>
+    async('{{ "/js/L2Dwidget.min.js" | prepend: site.baseurl }}', function(){
+        L2Dwidget.init({
+            "model": {
+                "jsonPath": "live2d_models/wanko.model.json",
+                "scale": 1
+            },
+            "display": {
+                "position": "left",
+                "width": 120,
+                "height": 240,
+                "hOffset": -20,
+                "vOffset": -120
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    })
+</script>
+
 
 <!-- Google Analytics -->
 {% if site.ga_track_id %}
